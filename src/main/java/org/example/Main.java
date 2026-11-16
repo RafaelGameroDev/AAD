@@ -13,35 +13,35 @@ public class Main {
         Path movido = Path.of("prueba_ficheros", "piccolo.txt");
 
         try {
-            // 1. Crear directorio
+            // 1 Crear directorio
             gestor.crearDirectorio(carpeta);
             System.out.println("Directorio creado");
 
-            // 2. Crear fichero
+            // 2 Crear fichero
             gestor.crearFichero(archivo);
             System.out.println("Fichero creado");
 
-            // 3. Copiar fichero
+            // 3 Copiar fichero
             gestor.copiar(archivo, copia);
             System.out.println("Fichero copiado");
 
-            // 4. Mover fichero
+            // 4 Mover fichero
             gestor.mover(copia, movido);
             System.out.println("Fichero movido");
 
-            // 5. Listar contenido
+            // 5 Listar contenido
             System.out.println("Contenido:");
             for (Path p : gestor.listar(carpeta)) {
                 System.out.println(p.getFileName());
             }
 
-            // 6. Buscar fichero
+            // 6 Buscar fichero
             System.out.println("Resultado de búsqueda:");
             for (Path p : gestor.buscar(carpeta, "goku.txt")) {
                 System.out.println(p);
             }
 
-            // 7. Eliminar directorio y contenido
+            // 7 Eliminar directorio y contenido
             gestor.eliminar(carpeta);
             System.out.println("Directorio eliminado");
 
